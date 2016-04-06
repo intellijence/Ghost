@@ -12,7 +12,7 @@ moment_jalali.loadPersian();
 var fixNums = function(str) {
         var arr = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
         for(var i=0;i<10;i++) {
-                str = str.replace(i,arr[i]);
+                str = str.replace(new RegExp(i,'g'),arr[i]);
         }
         return str;
 };
